@@ -1,5 +1,8 @@
 #include <iostream>
 using namespace std;
+
+#include "List.h"
+
 /*
 int sum(int a, int b){
     return a + b;
@@ -24,18 +27,29 @@ T sum(T a, T b){
 
 
 int main(){
+    /*
     string a = "hola ";
     string b = "crayola";
     cout << "La suma entre " << a << " y " << b << " es: " << sum(a,b) << endl;
-
+    
     int c = 5;
     int d = 10;
     cout << "La suma entre " << c << " y " << d << " es: " << sum(c,d) << endl;
-
+    
     double e = 5.5;
     double f = 10.5;
     cout << "La suma entre " << e << " y " << f << " es: " << sum(e,f) << endl;
+    */
 
+    List<int> list;
+    list.insert(5);
+    list.insert(10);
+    list.insert(15);
+
+    List<string> things;
+    things.insert("Laptop");
+    things.insert("Bottle");
+    things.insert("Mouse");
 
     return 0;
 
