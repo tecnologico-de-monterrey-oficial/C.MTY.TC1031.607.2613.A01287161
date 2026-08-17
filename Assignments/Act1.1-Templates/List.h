@@ -40,21 +40,33 @@ void List<T>::removeLast(){
         cout << list[size -1] << endl;
         list.pop_back(data);
         size--;
-    };
+    }
     else(){
         cout << "No hay elementos" << endl;
-    };
+    }
 }
 
 template <typename T>
 T List<T>::getData(int pos){
     return list[pos];
-};
+}
 
 template <typename T>
 int List<T>::getSize(){
     return size;
-};
+}
+
+template <typename T>
+T List<T>::getMax(){
+    T maxVal = list[0];
+    for (int i = 0; i < size; i++){
+        if(list[i] > maxVal){
+            maxVal = list[i];
+        }
+    }
+    return maxVal;
+    
+}
 
 
 
