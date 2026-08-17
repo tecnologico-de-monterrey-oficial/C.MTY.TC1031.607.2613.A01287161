@@ -41,7 +41,7 @@ void List<T>::removeLast(){
         list.pop_back(data);
         size--;
     }
-    else(){
+    else{
         cout << "No hay elementos" << endl;
     }
 }
@@ -71,6 +71,17 @@ template <typename T>
 void List<T>::print(){
     for (int i = 0; i < size; i++){
         cout << "[" << i << "]" << list[i] << endl; 
+    }
+}
+
+template <typename T>
+void List<T>::insertAt(int pos, T data){
+    if(pos >= 0 && pos <= size){
+        list.insert(list.begin() + pos, data);
+        size ++;
+    }
+    else{
+        cout << "Posicion invalida." << endl;
     }
 }
 
