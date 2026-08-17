@@ -34,6 +34,19 @@ void List<T>::insert(T data){
     size++;
 }
 
+template <typename T>
+void List<T>::removeLast(){
+    if(size > 0 ){
+        cout << list[size -1] << endl;
+        list.pop_back(data);
+        size--;
+    };
+    else(){
+        cout << "No hay elementos" << endl;
+    };
+    
+}
+
 
 
 
