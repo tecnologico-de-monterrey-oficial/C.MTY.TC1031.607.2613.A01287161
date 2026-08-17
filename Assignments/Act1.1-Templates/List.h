@@ -12,6 +12,14 @@ class List {
     public:
         List();
         void insert(T data);
+        void removeLast();
+        T getData(int pos);
+        int getSize();
+        T getMax();
+        void print();
+        void insertAt(int pos, T data);
+        void removeAt(int pos);
+
 
 };
 
