@@ -44,8 +44,13 @@ void List<T>::removeLast(){
     else(){
         cout << "No hay elementos" << endl;
     };
-    
 }
+
+template <typename T>
+T List<T>::getData(int pos){
+    return list[pos];
+};
+
 
 
 
