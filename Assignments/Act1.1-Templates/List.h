@@ -19,8 +19,6 @@ class List {
         void print();
         void insertAt(int pos, T data);
         void removeAt(int pos);
-
-
 };
 
 template <typename T>
