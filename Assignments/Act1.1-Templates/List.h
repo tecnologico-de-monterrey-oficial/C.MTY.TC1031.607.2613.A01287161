@@ -59,14 +59,22 @@ int List<T>::getSize(){
 template <typename T>
 T List<T>::getMax(){
     T maxVal = list[0];
-    for (int i = 0; i < size; i++){
+    for (int i=0; i < size; i++){
         if(list[i] > maxVal){
             maxVal = list[i];
         }
     }
-    return maxVal;
-    
+    return maxVal; 
 }
+
+template <typename T>
+void List<T>::print(){
+    for (int i = 0; i < size; i++){
+        cout << "[" << i << "]" << list[i] << endl; 
+    }
+}
+
+
 
 
 
