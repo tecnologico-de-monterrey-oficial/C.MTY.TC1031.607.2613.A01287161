@@ -51,6 +51,13 @@ int main(){
     things.insert("Bottle");
     things.insert("Mouse");
 
-    return 0;
+    cout << "Tamaño de la lista: " << list.getSize() << endl;
+    cout << "Valor máximo: " << list.getMax() << endl;
+    cout << "Dato en la posición 1: " << list.getData(1) << endl;
+    list.insertAt(1, 15);
+    list.print();
+    list.removeLast(); 
 
+
+    return 0;
 }
