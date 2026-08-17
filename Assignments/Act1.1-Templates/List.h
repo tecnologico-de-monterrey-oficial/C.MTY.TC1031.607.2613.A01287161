@@ -85,6 +85,21 @@ void List<T>::insertAt(int pos, T data){
     }
 }
 
+template <typename T>
+void List<T>::removeAt(int pos){
+    if(size == 0){
+        cout << "No hay elementos." << endl;
+    }
+    else if(pos >= 0 && pos < size){
+        cout << list[pos] << endl;
+        list.erase(list.begin() + pos);
+        size --;
+    }
+    else{
+        cout << "Posición Invalida." << endl;
+    }
+}
+
 
 
 
