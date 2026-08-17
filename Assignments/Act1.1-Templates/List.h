@@ -51,6 +51,11 @@ T List<T>::getData(int pos){
     return list[pos];
 };
 
+template <typename T>
+int List<T>::getSize(){
+    return size;
+};
+
 
 
 
