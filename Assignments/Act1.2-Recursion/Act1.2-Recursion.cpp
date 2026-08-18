@@ -20,15 +20,47 @@ int sumRecursive(int n){
 }
 
 int sumFormula(int n){
-    int formula = n*(n+1)/2;
-    return formula;
+    return n*(n+1)/2;
 }
 
 int fibonacciIterative(int n){
-    int suma = 0;
-    for(int i = 0; i<=0 ; i++){
-        
+    int a = 1;
+    int b = 1;
+    int c;
+    for(int i = 3; i<=n; i++){
+        c = a+b;
+        a = b;
+        b = c;
     }
+    return b;
+}
+
+int fibonacciRecursive(int n){
+    if(n <= 2){
+        return 1;
+    }
+    return fibonacciRecursive(n-1)+fibonacciRecursive(n-2);
+}
+
+int bacteriasIterative(int n){
+    double born = 3.78, dead = 2.34;
+    int sum = 1;
+    for(int i = 1; i <= n; i++){
+        int bac;
+        int bacborn = sum * born;
+        int bacdead = sum * dead;
+        sum += bacborn - bacdead;
+    }
+    return sum;
+}
+
+int bacteriasRecursive(int n){
+    if(n == 0){
+        return 1;
+    }
+    int bacteria = bacteriasIterative(n-1);
+    int born = bacteria * 3.78, dead = bacteria * 2.34;
+    return bacteria + born - dead;
 
 }
 
@@ -41,7 +73,14 @@ int main(){
     // Suma con Formula
     cout << "La suma de formula de 5 es: " << sumFormula(5) << "\n" << endl;
     // Suma con FibonacciIterative
-    cout << "La suma de formula de 5 es: " << fibonacciIterative(5) << "\n" << endl;
+    cout << "La suma de fibonacci iterativa de 5 es: " << fibonacciIterative(5) << "\n" << endl;
+    // Suma con FibonacciRecursive
+    cout << "La suma de fibonacci recursiva de 5 es: " << fibonacciRecursive(5) << "\n" << endl;
+    // BacteriasIterative
+    cout << "BacteriasIterative es: " << bacteriasIterative(5) << "\n" << endl;
+    // BacteriasRecusrive
+    cout << "BacteriasRecusrive es: " << bacteriasRecursive(5) << "\n" << endl;
+
 
 
 
