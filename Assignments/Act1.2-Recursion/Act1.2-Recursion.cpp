@@ -46,7 +46,6 @@ int bacteriasIterative(int n){
     double born = 3.78, dead = 2.34;
     int sum = 1;
     for(int i = 1; i <= n; i++){
-        int bac;
         int bacborn = sum * born;
         int bacdead = sum * dead;
         sum += bacborn - bacdead;
@@ -64,6 +63,23 @@ int bacteriasRecursive(int n){
 
 }
 
+double investmentIterative(double cantidad, int n){
+    float porcentaje = .1875;
+    for(int i = 1; i<=n; i++){
+       cantidad = cantidad + (cantidad * porcentaje);
+    }
+    return cantidad;
+}
+
+double investmenRecursive(double cantidad, int n){
+    if(n<=0){
+        return cantidad;
+    }
+    return investmenRecursive(cantidad * 1.1875, n - 1);
+    
+}
+
+
 int main(){
     cout << "\n" << endl;
     // Suma Iterativa
@@ -80,6 +96,10 @@ int main(){
     cout << "BacteriasIterative es: " << bacteriasIterative(5) << "\n" << endl;
     // BacteriasRecusrive
     cout << "BacteriasRecusrive es: " << bacteriasRecursive(5) << "\n" << endl;
+    // investmentIterative
+    cout << "investmentIterative es: " << investmentIterative(500,2) << "\n" << endl;
+    // investmentRecursive
+    cout << "investmentRecursive es: " << investmenRecursive(500, 2) << "\n" << endl;
 
 
 
