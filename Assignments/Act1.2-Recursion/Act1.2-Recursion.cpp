@@ -76,9 +76,25 @@ double investmenRecursive(double cantidad, int n){
         return cantidad;
     }
     return investmenRecursive(cantidad * 1.1875, n - 1);
-    
 }
 
+double powIterative(int numero, int potencia){
+    double resultado = 1;
+    for(int i = 1; i <= potencia; i++){
+        resultado = resultado * numero;
+    }
+    return resultado;
+}
+
+double powRecursive(int numero, int potencia){
+    if(potencia == 0){
+        return 1;
+    }
+    else if(potencia == 1){
+        return numero;
+    }
+    return numero * powRecursive(numero, potencia - 1);
+}
 
 int main(){
     cout << "\n" << endl;
@@ -100,6 +116,10 @@ int main(){
     cout << "investmentIterative es: " << investmentIterative(500,2) << "\n" << endl;
     // investmentRecursive
     cout << "investmentRecursive es: " << investmenRecursive(500, 2) << "\n" << endl;
+    // powIterative
+    cout << "powIterative es: " << powIterative(4, 2) << "\n" << endl;
+    // powRecursive
+    cout << "powRecursive es: " << powRecursive(4, 2) << "\n" << endl;
 
 
 
